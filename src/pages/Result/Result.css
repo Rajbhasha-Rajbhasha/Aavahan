@@ -25,22 +25,9 @@
     text-align: center;
 }
 
-
-
-.winner-announcement .banner1-heading {
-    width: 100%;
-    margin-top: 2rem;
-    text-align: center;
-    background-color: #190918;
-
+.winner-announcement .banner1 h1 {
+    font-size: 2.5rem;
 }
-
-.winner-announcement .banner1-heading h2 {
-    color: #fff;
-    font-size: 3rem;
-
-}
-
 
 .winner-announcement .banner1 .quote {
     font-size: 1.2rem;
@@ -52,6 +39,12 @@
     display: inline-block;
 }
 
+.winner-announcement .banner1-heading {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px;
+}
 
 .winner-announcement .banner1-heading h1 {
     font-size: 3rem;
@@ -82,20 +75,6 @@
     font-size: 2.3rem;
     margin-bottom: 20px;
 }
-
-.winner-announcement p {
-    color: white;
-    /* Adjust heading color for readability */
-    z-index: 2;
-    /* Ensure heading is above the overlay */
-    position: relative;
-    /* Ensure it’s positioned correctly with the z-index */
-}
-
-.winner-announcement .event-section {
-    background: url('/src/assets/results/treasure-hunt-bg.png') no-repeat center center/cover;
-}
-
 
 /* Background for Treasure Hunt */
 .winner-announcement .event-section:nth-of-type(1) {
@@ -157,7 +136,7 @@
     margin-block-end: 0em;
 }
 
-.winner-announcement .event-section::before {
+.winner-announcement .event-section:nth-of-type(1)::before {
     content: "";
     position: absolute;
     top: 0;
@@ -170,29 +149,29 @@
 
 }
 
-.winner-announcement .event-section .winner-icons {
+.winner-announcement .event-section:nth-of-type(1) .winner-icons {
     position: relative;
     z-index: 2;
 }
 
-.winner-announcement .event-section .first-place {
+.winner-announcement .event-section:nth-of-type(2) .first-place {
 
     height: 210px;
     z-index: 2;
 }
 
-.winner-announcement .event-section h2 {
+.winner-announcement .event-section:nth-of-type(1) h2 {
     color: white;
     z-index: 2;
     position: relative;
 }
 
-.winner-announcement .event-section .winner-icons {
+.winner-announcement .event-section:nth-of-type(1) .winner-icons {
     position: relative;
     z-index: 2;
 }
 
-.winner-announcement .event-section .winner-icons .winner p {
+.winner-announcement .event-section:nth-of-type(1) .winner-icons .winner p {
     color: white;
 }
 
@@ -214,21 +193,6 @@
     position: relative;
     max-width: 800px;
     margin: 0 auto;
-}
-
-.winner-announcement .winner-not-announce {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    border-radius: 10px;
-    max-width: 400px;
-    height: 150px;
-    /* width: 100%; */
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
 }
 
 .winner-announcement .winner-icons .winner {
@@ -425,90 +389,27 @@
     }
 }
 
-
-
-.winner-announcement .event-section:nth-of-type(13) {
+.winner-announcement .event-section:nth-of-type(4) {
     background: url('/src/assets/results/treasure-hunt-bg.png') no-repeat center center/cover;
-    position: relative;
-    overflow: hidden;
-}
-
-.winner-announcement .event-section:nth-of-type(13) .winner-icons {
-    position: relative;
-    z-index: 2;
-    /* Ensure content is above the overlay */
-}
-
-/* Ensure consistency with other sections */
-.winner-announcement .event-section:nth-of-type(13) h2 {
-    color: white;
-    /* Adjust heading color for readability */
-    z-index: 2;
-    /* Ensure heading is above the overlay */
-    position: relative;
-    /* Ensure it’s positioned correctly with the z-index */
-}
-
-
-
-.winner-announcement .event-section:nth-of-type(13) .winner-icons {
-    position: relative;
-    z-index: 2;
-    /* Ensure the content is above the overlay */
-}
-
-/* Ensure text color is white for readability */
-.winner-announcement .event-section:nth-of-type(13) .winner-icons .winner p {
-    color: white;
-}
-
-.winner-announcement .event-section:nth-of-type(13)::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /* Adjust opacity here */
-    z-index: 1;
-    /* Ensure the overlay is above the background image */
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.winner-announcement .event-section:nth-of-type(13) {
+.winner-announcement .event-section:nth-of-type(5) {
     background: url('/src/assets/results/kavita-lekhan.png') no-repeat center center/cover;
     position: relative;
     overflow: hidden;
 }
 
-.winner-announcement .event-section:nth-of-type(13) .winner-icons {
+.winner-announcement .event-section:nth-of-type(5) .winner-icons {
     position: relative;
     z-index: 2;
     /* Ensure content is above the overlay */
 }
 
 /* Ensure consistency with other sections */
-.winner-announcement .event-section:nth-of-type(13) h2 {
+.winner-announcement .event-section:nth-of-type(5) h2 {
     color: white;
     /* Adjust heading color for readability */
     z-index: 2;
@@ -517,18 +418,18 @@
     /* Ensure it’s positioned correctly with the z-index */
 }
 
-.winner-announcement .event-section:nth-of-type(13) .winner-icons {
+.winner-announcement .event-section:nth-of-type(5) .winner-icons {
     position: relative;
     z-index: 2;
     /* Ensure the content is above the overlay */
 }
 
 /* Ensure text color is white for readability */
-.winner-announcement .event-section:nth-of-type(13) .winner-icons .winner p {
+.winner-announcement .event-section:nth-of-type(5) .winner-icons .winner p {
     color: white;
 }
 
-.winner-announcement .event-section:nth-of-type(13)::before {
+.winner-announcement .event-section:nth-of-type(5)::before {
     content: "";
     position: absolute;
     top: 0;
@@ -541,20 +442,20 @@
     /* Ensure the overlay is above the background image */
 }
 
-.winner-announcement .event-section:nth-of-type(14) {
+.winner-announcement .event-section:nth-of-type(6) {
     background: url('/src/assets/results/laghuvideo.png') no-repeat center center/cover;
     position: relative;
     overflow: hidden;
 }
 
-.winner-announcement .event-section:nth-of-type(14) .winner-icons {
+.winner-announcement .event-section:nth-of-type(6) .winner-icons {
     position: relative;
     z-index: 2;
     /* Ensure content is above the overlay */
 }
 
 /* Ensure consistency with other sections */
-.winner-announcement .event-section:nth-of-type(14) h2 {
+.winner-announcement .event-section:nth-of-type(6) h2 {
     color: white;
     /* Adjust heading color for readability */
     z-index: 2;
@@ -563,18 +464,18 @@
     /* Ensure it’s positioned correctly with the z-index */
 }
 
-.winner-announcement .event-section:nth-of-type(14) .winner-icons {
+.winner-announcement .event-section:nth-of-type(6) .winner-icons {
     position: relative;
     z-index: 2;
     /* Ensure the content is above the overlay */
 }
 
 /* Ensure text color is white for readability */
-.winner-announcement .event-section:nth-of-type(14) .winner-icons .winner p {
+.winner-announcement .event-section:nth-of-type(6) .winner-icons .winner p {
     color: white;
 }
 
-.winner-announcement .event-section:nth-of-type(14)::before {
+.winner-announcement .event-section:nth-of-type(6)::before {
     content: "";
     position: absolute;
     top: 0;
