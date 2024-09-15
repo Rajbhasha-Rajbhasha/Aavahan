@@ -74,7 +74,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="made-with">
-          <p>Made with <span role="img" aria-label="heart">❤️</span> by <a href="" onClick={() => ClickHandle('team')} className="web-team">Web Team</a></p>
+          <p>Made with <span role="img" aria-label="heart">❤️</span> by <a href="" onClick={() => ClickHandle('webteam')} className="web-team">Web Team</a></p>
         </div>
         <div className="social-connect">
           <p>राजभाषा समिति से जुड़े:</p>
