@@ -2,7 +2,9 @@
     background-color: #2d112b;
    
 }
-
+.belowbanner1::-webkit-scrollbar {
+    display: none; /* Hides scrollbar */
+}
 
 .tab .intro h2 {
     margin-block-start: 0;
