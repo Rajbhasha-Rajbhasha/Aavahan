@@ -50,7 +50,7 @@
 }
 
 .club-name {
-  font-size: 36px;
+  font-size: 27px;
   font-weight: bold;
   color: #f1c40f;
   font-family: 'Lora', serif; /* More sophisticated font for the club name */
@@ -103,10 +103,13 @@
   justify-content: center;
 }
 
-.footer-event-list {
+.footer-event-list, .quick-list {
   display: flex;
   justify-content: space-around;
   width: 90%;
+}
+.quick-list{
+  width:80%;  
 }
 
 .footer-event-column {
@@ -327,10 +330,14 @@
 /* Responsive Design */
 
 @media(max-width: 1200px){
-  .footer-event-list {
+  .footer-event-list, .quick-list {
     display: flex;
     justify-content: space-around;
     width: 100%;
+  }
+
+  .club-name {
+    font-size: 26px;
   }
 }
 
@@ -342,6 +349,12 @@
     width: 30%;
   }
 
+  .quick-list{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+  }
+
   .footer-container {
     flex-wrap: wrap;
   }
@@ -349,6 +362,10 @@
   .footer-section {
     flex: 1 1 45%;
     margin: 20px 0;
+  }
+
+  .club-name {
+    font-size: 25px;
   }
 }
 
@@ -359,6 +376,10 @@
 
   .footer-bottom{
     padding: 0%;
+  }
+
+  .club-name {
+    font-size: 26px;
   }
 
 }
@@ -372,6 +393,7 @@
   .footer-section {
     margin: 20px 0;
     text-align: center;
+    width: 50%;
   }
 
   .footer-bottom {
@@ -408,6 +430,37 @@
     margin-bottom: 2rem;
   }
 
+  .quick-list{
+    width: 65%;
+  }
+
+  .club-name {
+    font-size: 26px;
+  }
+
+}
+
+@media (max-width:870px){
+  .quick-list{
+    width: 75%;
+  }
+  .club-name {
+    font-size: 26px;
+  }
+}
+
+@media (max-width:755px){
+  .quick-list{
+    width: 95%;
+  }
+
+  .footer-section{
+    width: 90%;
+  }
+
+  .club-name {
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -423,7 +476,7 @@
   }
 
   .club-name {
-    font-size: 26px;
+    font-size: 25px;
   }
 
   .club-quote {
@@ -436,6 +489,10 @@
 
   .quick-links a {
     font-size: 14px;
+  }
+
+  .footer-section{
+    width: 100%;
   }
 
   /* .social-icon {

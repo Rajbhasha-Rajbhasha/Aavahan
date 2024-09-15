@@ -18,7 +18,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         {/* Quick Links Section on the Left */}
-        <div className="footer-section quick-links-section">
+        {/* <div className="footer-section quick-links-section">
           <h4 className="footer-title">त्वरित लिंक</h4>
           <ul className="quick-links">
             <li><a  onClick={() => ClickHandle('events')}>इवेंट्स</a></li>
@@ -26,7 +26,31 @@ const Footer = () => {
             <li><a  onClick={() => ClickHandle('gallery')}>गैलरी</a></li>
             <li><a  onClick={() => ClickHandle('contact')}>संपर्क</a></li>
           </ul>
+        </div> */}
+
+
+        <div className="events-section footer-section">
+          <h4 className="footer-eventtitle">त्वरित लिंक</h4>
+          <div className='outer-layer inner-layer'>
+            <div className="quick-list">
+              <ul className="footer-event-column">
+                <li onClick={() => ClickHandle('events')}><a href=''>इवेंट्स</a></li>
+                <li><a href='https://rajbhashanitrr.in/'>मर्चेंडाइज़</a></li>
+                <li onClick={() => ClickHandle('gallery')}><a href=''>गैलरी</a></li>
+                <li onClick={() => ClickHandle('contact')}><a href=''>संपर्क</a></li>
+              </ul>
+              <ul className="footer-event-column">
+                <li onClick={() => ClickHandle('results')}><a href=''>परिणाम</a></li>
+                <li onClick={() => ClickHandle('team')}><a href=''>टीम</a></li>
+                <li onClick={() => ClickHandle('Home')}><a href=''>मुख्य पृष्ठ</a></li>
+                <li onClick={() => ClickHandle('Main')}><a href=''>मुख्य वेबसाइट</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+
+
 
         {/* Club Logo and Info Section in the Center */}
         <div className="footer-section club-info">
@@ -43,17 +67,17 @@ const Footer = () => {
           <h4 className="footer-eventtitle">इवेंट्स</h4>
           <div className='outer-layer'>
             <div className="footer-event-list">
-              <ul className="footer-event-column">
-                <li><a  onClick={() => handleClick('nukkad')}>नुक्कड़</a></li>
-                <li><a onClick={() => handleClick('treasure')}>खजाने की खोज</a></li>
-                <li><a onClick={() => handleClick('andha')}>अंधा मोड़</a></li>
-                <li><a onClick={() => handleClick('andha')}>चित्र कथा</a></li>
+            <ul className="footer-event-column">
+                <li onClick={() => handleClick('nukkad')}><a href=''>नुक्कड़</a></li>
+                <li onClick={() => handleClick('andha')}><a href=''>खजाने की खोज</a></li>
+                <li onClick={() => handleClick('treasure')}><a href=''>अंधा मोड़</a></li>
+                <li onClick={() => handleClick('nukkad')}><a href=''>चित्र कथा</a></li>
               </ul>
               <ul className="footer-event-column">
-                <li><a onClick={() => handleClick('andha')}>चकमा गेंद</a></li>
-                <li><a  onClick={() => handleClick('andha')}>गतिस्पर्धा</a></li>
-                <li><a  onClick={() => handleClick('andha')}>कविता वाचन</a></li>
-                <li><a  onClick={() => handleClick('andha')}>प्रश्नोत्तरी</a></li>
+                <li onClick={() => handleClick('nukkad')}><a href=''>चकमा गेंद</a></li>
+                <li onClick={() => handleClick('nukkad')}><a href=''>गतिस्पर्धा</a></li>
+                <li onClick={() => handleClick('nukkad')}><a href=''>कविता वाचन</a></li>
+                <li onClick={() => handleClick('nukkad')}><a href=''>प्रश्नोत्तरी</a></li>
               </ul>
             </div>
           </div>

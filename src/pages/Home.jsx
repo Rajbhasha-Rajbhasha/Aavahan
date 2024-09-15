@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Banner from "./utils/Banner";
+import Impression from "./Impression.jsx";
 
 import BelowBanner from "./utils/BelowBanner";
 import "./home.css";
@@ -19,6 +20,7 @@ useEffect(() => {
         
         </div> */}
 
+        <Impression />
      
       </div>
     </div>
