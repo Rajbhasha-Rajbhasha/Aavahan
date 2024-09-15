@@ -30,7 +30,7 @@ const eventDetails = {
     time: '1:00 PM',
     venue: 'Front of Main Building',
     description: 'इसमें प्रतिभागियों को विभिन्न सुरागों के आधार पर एक निर्धारित लक्ष्य यानी खजाने तक पहुंचना होता है। यह दिमागी खेल है जिसमें त्वरित सोच और निर्णय लेने की क्षमता आवश्यक होती है।',
-    images: ['https://i.postimg.cc/LXCsbvCV/DSC01889.jpg', 'https://i.postimg.cc/Pr8qSWmm/DSC01903.jpg', 'https://i.postimg.cc/7Z8Zd5Vj/IMG-7230.avif'],
+    images: ['/src/assets/images/nukkad.jpg', '/src/assets/images/nukkad.jpg', '/src/assets/images/nukkad.jpg'],
     rulesFile: 'treasure.txt',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSe7MepNkwXY6LI4rmwhz1f0cZg4xs1Ntq2MvXXNwO75Zp8tvw/viewform'
   },
@@ -52,7 +52,7 @@ function EventDetail() {
   const [rules, setRules] = useState('');
 
   useEffect(() => {
-    fetch(`/txts/${event.rulesFile}`)
+    fetch(`/src/assets/txts/${event.rulesFile}`)
       .then((response) => response.text())
       .then((text) => setRules(text))
       .catch((error) => console.error('Error fetching rules:', error));
@@ -65,15 +65,15 @@ function EventDetail() {
 
         <div className='minor-details'>
           <div className='minor'>
-            <img src='/svgss/calendar.vite.svg' style={{ height: '50px', width: '50px', borderRadius: '50%' }} alt="nukkad Icon" />
+            <img src='/src/assets/svgs/calendar.svg' style={{ height: '50px', width: '50px', borderRadius: '50%' }} alt="nukkad Icon" />
             <p className='small-text'>Date : {event.nukkad}</p>
           </div>
           <div className='minor'>
-            <img src='/svgss/location.svg' style={{ height: '50px', width: '50px', borderRadius: '50%' }} alt="nukkad Icon" />
+            <img src='/src/assets/svgs/location.svg' style={{ height: '50px', width: '50px', borderRadius: '50%' }} alt="nukkad Icon" />
             <p className='small-text'>Venue : {event.venue}</p>
           </div>
           <div className='minor'>
-            <img src='/svgss/time.svg' style={{ height: '50px', width: '50px', borderRadius: '50%' }} alt="nukkad Icon" />
+            <img src='/src/assets/svgs/time.svg' style={{ height: '50px', width: '50px', borderRadius: '50%' }} alt="nukkad Icon" />
             <p className='small-text'>Time : {event.time}</p>
           </div>
         </div>
@@ -95,7 +95,7 @@ function EventDetail() {
             </div>
             <div className="contact-container">
               <div style={{ display: 'flex', gap: '10px' }}>
-                <img src='/svgss/contact.svg' style={{ height: '50px', width: '50px', borderRadius: '50%' }} />
+                <img src='/src/assets/svgs/contact.svg' style={{ height: '50px', width: '50px', borderRadius: '50%' }} />
                 <p className='rules'>संपर्क</p>
               </div>
               <div className='organizer'>Aryan: 9931603459</div>
@@ -105,7 +105,7 @@ function EventDetail() {
         ) : (
           <div style={{ width: '90%', marginTop:'2rem' }}>
             <div style={{ display: 'flex', gap: '10px' }}>
-              <img src='/svgss/contact.svg' style={{ height: '50px', width: '50px', borderRadius: '50%' }} />
+              <img src='/src/assets/svgs/contact.svg' style={{ height: '50px', width: '50px', borderRadius: '50%' }} />
               <p className='rules'>संपर्क</p>
             </div>
             <div className='organizer'>Aryan Pareek : 9931603459</div>
