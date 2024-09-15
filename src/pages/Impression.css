@@ -1,0 +1,40 @@
+.flex-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  /* height:70%;        */
+  /* height: 100vh;                 */
+  background-color: #2d112b;     
+  /* margin-bottom: 5000px; */
+  /* width:100%; */
+}
+
+.layer{
+  display: flex;
+  /* gap:5px; */
+  /* width: 100%; */
+  justify-content: space-evenly;
+}
+
+.flex-item {
+  padding: 10px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 5rem;
+  font-weight:bold;
+  font-size: 1.5rem;
+}
+
+img{
+  border-radius: 10%;
+  object-fit: cover;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  /* height:4000x;
+  width:4000px; */
+}
+
+img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Darker, larger shadow on hover */
+}

@@ -13,7 +13,7 @@ import EventDetail from './pages/EventDetail.jsx';  // Import EventDetail
 import './index.css'
 import Gallery from './pages/Gallery/Gallery.jsx';
 import Result from './pages/Result/Result.jsx';
-import ContactPage from './pages/ContactPage.jsx';
+import ContactPage from './pages/components/ContactPage.jsx';
 import GalleryDetail from './pages/GalleryDetail/GalleryDetail.jsx';
 
 const router = createBrowserRouter([

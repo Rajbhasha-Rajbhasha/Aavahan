@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import './Navbar3.css';
+import './Navbar3.css'; // Ensure this path is correct
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
     const [sticky, setSticky] = useState(false);
@@ -44,11 +45,18 @@ function Navbar() {
         </>
     );
 
+    const navigate = useNavigate();
+
+    const ClickHandle = (id) => {
+        navigate(`/${id}`);
+      };
+
     return (
         <div className={`navbar-container ${sticky ? 'sticky-navbar' : ''}`}>
             <div className="navbar">
                 <div className="navbar-start">
-                    <a className="logo">राजभाषा</a>
+                    {/* Replace the text with an image */}
+                    <img src="/rajbhashalogo.jpeg" alt="Rajbhasha Logo" className="navbar-logo" style = {{borderRadius:'50%'}} onClick={() => ClickHandle('')}/>
                 </div>
                 <div className="navbar-center">
                     <ul className="nav-menu">
@@ -78,6 +86,7 @@ function Navbar() {
                         </ul>
                     </div>
                 </div>
+
             </div>
         </div>
     );
