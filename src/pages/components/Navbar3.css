@@ -288,6 +288,14 @@
         display: flex;
         justify-content: flex-end;
     }
+    
+    .dropdown-content show{
+        /* width: 100%; Ensure dropdown takes full width */
+        /* display: flex;
+        justify-content: flex-end; */
+        display: none;
+    }
+
 
     .nav-menu {
         flex-direction: row; /* Keep horizontal layout */

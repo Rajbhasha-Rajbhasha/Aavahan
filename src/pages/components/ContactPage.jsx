@@ -27,7 +27,7 @@ const ContactPage = () => {
                         <button type="submit">संदेश भेजें</button>
                     </form>
                 </div>
-                <div className="contact-info">
+                <div className="contact-infos">
                     <h2>हमारा स्थान</h2>
                     <div className="map-container">
                         <iframe
