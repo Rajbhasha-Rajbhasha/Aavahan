@@ -42,7 +42,7 @@
     display: flex;
 }
 
-.contact-form-container, .contact-info {
+.contact-form-container, .contact-infos {
     flex: 1;
     margin: 20px;
     margin-bottom: 90px;
@@ -53,12 +53,12 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-form-container:hover, .contact-info:hover {
+.contact-form-container:hover, .contact-infos:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.contact-form-container h2, .contact-info h2 {
+.contact-form-container h2, .contact-infos h2 {
     font-family: 'Noto Sans Devanagari', sans-serif; /* Updated font */
     font-size: 1.8em;
     margin-bottom: 20px;
@@ -115,7 +115,7 @@
     animation: bounce 0.5s ease;
 }
 
-.contact-info h2 {
+.contact-infos h2 {
     font-family: 'Noto Sans Devanagari', sans-serif; /* Updated font */
     font-size: 1.8em;
     margin-bottom: 20px;
@@ -208,12 +208,12 @@ iframe {
         flex-direction: column;
     }
 
-    .contact-form-container, .contact-info {
+    .contact-form-container, .contact-infos {
         margin: 5px;
         padding: 15px;
     }
 
-    .contact-form-container h2, .contact-info h2 {
+    .contact-form-container h2, .contact-infos h2 {
         font-size: 2em;
     }
 
@@ -237,7 +237,7 @@ iframe {
         font-size: 1.2em;
     }
 
-    .contact-form-container h2, .contact-info h2 {
+    .contact-form-container h2, .contact-infos h2 {
         font-size: 1.8em;
     }
 
