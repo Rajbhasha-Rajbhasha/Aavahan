@@ -14,7 +14,11 @@ import Cores from "./Cores";
 
 const Team = () => {
   return (
-    <div className={styles.container} style={{background:"#fef9e7" , maxWidth:"100vw" ,overflowX:"hidden"}}>
+    <div className={styles.container} style={{background:"#fef9e7" , maxWidth:"100vw" ,overflowX:"hidden", backgroundImage: 'url(https://i.postimg.cc/YCTcMP4y/bgweb12.jpg)', backgroundSize: 'cover',
+      backgroundPosition: 'center', 
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed'}
+    }>
       <Title color={"RAJBHASHA"} noncolor={"TEAM"} />
       <div data-aos="fade-up" className="container">
         <div className="fn_cs_news container">

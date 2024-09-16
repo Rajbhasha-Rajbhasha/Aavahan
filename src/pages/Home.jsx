@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Banner from "./utils/Banner";
 import Impression from "./Impression.jsx";
+import Below from './utils/Below.jsx';
 
 import BelowBanner from "./utils/BelowBanner";
 import "./home.css";
@@ -15,7 +16,7 @@ useEffect(() => {
     <div className="parallex">
       <Banner />
       <div className="wrapper">
-        <BelowBanner />
+        <Below />
         {/* <div className="below-banner-2">
         
         </div> */}
