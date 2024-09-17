@@ -1,32 +1,36 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
 import './Footer.css';
-import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaYoutube, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+// import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 
 const Footer = () => {
-  const navigate = useNavigate(); // Initialize the navigate function
-
-  const handleClick = (id) => {
-    navigate(`/events/${id}`);
-  };
-
-  const ClickHandle = (id) => {
-    navigate(`/${id}`);
-  };
 
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Quick Links Section on the Left */}
-        <div className="footer-section quick-links-section">
-          <h4 className="footer-title">त्वरित लिंक</h4>
-          <ul className="quick-links">
-            <li><a  onClick={() => ClickHandle('events')}>इवेंट्स</a></li>
-            <li><a href="https://www.rajbhashanitrr.in">मर्चन्डाइज़</a></li>
-            <li><a  onClick={() => ClickHandle('gallery')}>गैलरी</a></li>
-            <li><a  onClick={() => ClickHandle('contact')}>संपर्क</a></li>
-          </ul>
+        <div className="events-section footer-section">
+          <h4 className="footer-eventtitle">त्वरित लिंक</h4>
+          <div className='outer-layer inner-layer'>
+            <div className="quick-list">
+              <ul className="footer-event-column">
+                <li><NavLink to="/">होम</NavLink></li>
+                <li><a href='https://rajbhashanitrr.in/'>मर्चेंडाइज़</a></li>
+                <li><NavLink to="/gallery">गैलरी</NavLink></li>
+                <li><a href='https://rajbhasha.vercel.app/'>मुख्य वेबसाइट</a></li>
+              </ul>
+              <ul className="footer-event-column">
+                <li><NavLink to="/results">परिणाम</NavLink></li>
+                <li><NavLink to="/team">टीम</NavLink></li>
+                <li><NavLink to="/events">इवेंट्स</NavLink></li>
+                <li><NavLink to="/contact">संपर्क</NavLink></li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+
+
 
         {/* Club Logo and Info Section in the Center */}
         <div className="footer-section club-info">
@@ -43,23 +47,23 @@ const Footer = () => {
           <h4 className="footer-eventtitle">इवेंट्स</h4>
           <div className='outer-layer'>
             <div className="footer-event-list">
-              <ul className="footer-event-column">
-                <li><a  onClick={() => handleClick('nukkad')}>नुक्कड़</a></li>
-                <li><a onClick={() => handleClick('treasure')}>खजाने की खोज</a></li>
-                <li><a onClick={() => handleClick('andha')}>अंधा मोड़</a></li>
-                <li><a onClick={() => handleClick('andha')}>चित्र कथा</a></li>
+            <ul className="footer-event-column">
+                <li ><NavLink to="/events/nukkad">नुक्कड़</NavLink></li>
+                <li ><NavLink to="/events/andha">प्रश्नोत्तरी</NavLink></li>
+                <li ><NavLink to="/events/andha">अंधा मोड़</NavLink></li>
+                <li ><NavLink to="/events/nukkad">चित्र कथा</NavLink></li>
               </ul>
               <ul className="footer-event-column">
-                <li><a onClick={() => handleClick('andha')}>चकमा गेंद</a></li>
-                <li><a  onClick={() => handleClick('andha')}>गतिस्पर्धा</a></li>
-                <li><a  onClick={() => handleClick('andha')}>कविता वाचन</a></li>
-                <li><a  onClick={() => handleClick('andha')}>प्रश्नोत्तरी</a></li>
+                <li ><NavLink to="/events/nukkad">चकमा गेंद</NavLink></li>
+                <li ><NavLink to="/events/nukkad">गतिस्पर्धा</NavLink></li>
+                <li ><NavLink to="/events/nukkad">कविता वाचन</NavLink></li>
+                <li ><NavLink to="/events/nukkad">खजाने की खोज</NavLink></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-
+      {/* <hr/> */}
       {/* Footer Bottom Section */}
       <div className="footer-bottom">
         <div className="contact-info">
@@ -74,9 +78,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="made-with">
-          <p>Made with <span role="img" aria-label="heart">❤️</span> by <a href="" onClick={() => ClickHandle('team')} className="web-team">Web Team</a></p>
+          <div >
+          <p>Made with <span role="img" aria-label="heart">❤️</span> by <NavLink to="/webteam" className='web-team'>WebTeam</NavLink></p></div>
         </div>
         <div className="social-connect">
+          <div className='inside-social'>
           <p>राजभाषा समिति से जुड़े:</p>
           <div className="social-icons">
             <a href="https://www.facebook.com/rajbhasha.nitrr/" target="_blank" rel="noopener noreferrer" data-tooltip="Follow us on Facebook">
@@ -85,9 +91,13 @@ const Footer = () => {
             <a href="https://www.instagram.com/rajbhasha_nit_raipur/?igsh=YmQ5ODNtMG85czBt" target="_blank" rel="noopener noreferrer" data-tooltip="Follow us on Instagram">
               <FaInstagram className="social-icon" />
             </a>
-            <a href="https://in.linkedin.com/company/राजभाषा-समिति-nit-raipur" target="_blank" rel="noopener noreferrer" data-tooltip="Follow us on Twitter">
-              <FaTwitter className="social-icon" />
+            <a href="https://in.linkedin.com/company/राजभाषा-समिति-nit-raipur" target="_blank" rel="noopener noreferrer" data-tooltip="Follow us on LinkedIn">
+              <FaLinkedin className="social-icon" />
             </a>
+            <a href="https://www.youtube.com/@028karyanpareek9" target="_blank" rel="noopener noreferrer" data-tooltip="Follow us on Youtube">
+              <FaYoutube className="social-icon" />
+            </a>
+          </div>
           </div>
         </div>
       </div>

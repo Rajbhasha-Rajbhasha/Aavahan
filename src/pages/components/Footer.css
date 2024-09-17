@@ -18,6 +18,13 @@
   padding: 0 40px;
 }
 
+
+/* hr {
+  border: 0;
+  border-top: 1px solid black;
+  margin:0; /* Optional: Adjust the spacing */
+ */
+
 /* Align Sections */
 .quick-links-section,
 .contact-info {
@@ -50,7 +57,7 @@
 }
 
 .club-name {
-  font-size: 36px;
+  font-size: 27px;
   font-weight: bold;
   color: #f1c40f;
   font-family: 'Lora', serif; /* More sophisticated font for the club name */
@@ -103,11 +110,14 @@
   justify-content: center;
 }
 
-.footer-event-list {
+.footer-event-list, .quick-list {
   display: flex;
   justify-content: space-around;
-  width: 90%;
+  width: 80%;
 }
+/* .quick-list{
+  width:70%;  
+} */
 
 .footer-event-column {
   list-style-type: none;
@@ -228,7 +238,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  border-top: 1px solid #34495e;
+  border-top: 1.2px solid #000000;
   margin-top: 20px;
   /* flex-direction: column-reverse; Modify to stack copyright below */
 }
@@ -240,12 +250,24 @@
   opacity: 0.8;
 }
 
+.contact-info{
+  height: 23vh;
+}
+
 .footer-bottom .made-with {
   text-align: center;
   flex: 2;
 }
 
-.footer-bottom .social-connect {
+.social-connect{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 25vh;
+}
+
+
+.inside-social {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,6 +278,7 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 15px;
+
   color: #f1c40f;
 }
 
@@ -279,6 +302,13 @@
   color: white;
 }
 
+
+.made-with{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 20vh;
+}
 /* Made with ❤️ Section */
 .made-with p {
   font-size: 24px; /* Further enlarged font size */
@@ -327,10 +357,14 @@
 /* Responsive Design */
 
 @media(max-width: 1200px){
-  .footer-event-list {
+  .footer-event-list, .quick-list {
     display: flex;
     justify-content: space-around;
     width: 100%;
+  }
+
+  .club-name {
+    font-size: 26px;
   }
 }
 
@@ -342,6 +376,12 @@
     width: 30%;
   }
 
+  .quick-list{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+  }
+
   .footer-container {
     flex-wrap: wrap;
   }
@@ -349,6 +389,10 @@
   .footer-section {
     flex: 1 1 45%;
     margin: 20px 0;
+  }
+
+  .club-name {
+    font-size: 25px;
   }
 }
 
@@ -359,6 +403,10 @@
 
   .footer-bottom{
     padding: 0%;
+  }
+
+  .club-name {
+    font-size: 26px;
   }
 
 }
@@ -372,6 +420,7 @@
   .footer-section {
     margin: 20px 0;
     text-align: center;
+    width: 50%;
   }
 
   .footer-bottom {
@@ -386,7 +435,7 @@
   .footer-event-list {
     display: flex;
     justify-content: space-around;
-    width: 90%;
+    width: 70%;
   }
 
   .social-connect {
@@ -396,11 +445,7 @@
   .contact-info{
     order: 1;
     margin-bottom: 1rem;
-  }
-  
-  .social-connect{
-    order: 2;
-    margin-bottom: 2rem;
+    padding-top: 1rem;
   }
 
   .made-with{
@@ -408,6 +453,102 @@
     margin-bottom: 2rem;
   }
 
+  .quick-list{
+    width: 65%;
+  }
+
+  .club-name {
+    font-size: 26px;
+  }
+
+  .social-connect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0%;
+    order: 2;
+    /* margin-bottom: 2rem; */
+  }
+
+  .inside-social{
+    justify-content: center;
+  }
+
+  .contact-info{
+    margin-bottom: 0%;
+  }
+
+
+
+}
+
+@media (max-width:870px){
+  .quick-list{
+    width: 65%;
+  }
+  .club-name {
+    font-size: 26px;
+  }
+
+  .social-connect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0%;
+  }
+
+  .contact-info{
+    margin-bottom: 0%;
+  }
+
+  .inside-social{
+    justify-content: center;
+  }
+
+
+}
+
+@media (max-width:755px){
+  .quick-list{
+    width: 50%;
+  }
+
+  .footer-section{
+    width: 90%;
+  }
+
+  .club-name {
+    font-size: 25px;
+  }
+
+  .social-connect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0%;
+  }
+
+  .inside-social{
+    justify-content: center;
+  }
+
+  .contact-info{
+    margin-bottom: 0%;
+  }
+
+  .footer-event-list{
+    width:50%;
+  }
+}
+
+@media (max-width:620px){
+  .footer-event-list{
+    width:68%;
+  }
+
+  .quick-list{
+    width: 60%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -415,7 +556,7 @@
   .footer-event-list {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 85%;
   }
 
   .events-section{
@@ -423,7 +564,7 @@
   }
 
   .club-name {
-    font-size: 26px;
+    font-size: 25px;
   }
 
   .club-quote {
@@ -438,7 +579,15 @@
     font-size: 14px;
   }
 
+  .footer-section{
+    width: 100%;
+  }
+
   /* .social-icon {
     font-size: 26px;
   } */
+
+  .quick-list{
+    width: 70%;
+  }
 }

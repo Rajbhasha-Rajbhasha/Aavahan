@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './Navbar3.css';
 
 function Navbar() {
@@ -36,11 +36,11 @@ function Navbar() {
 
     const navItems = (
         <>
-            <li><Link to="/">होम</Link></li>
-            <li><Link to="/team">टीम</Link></li>
-            <li><Link to="/events">इवेंट्स</Link></li>
-            <li><Link to="/gallery">गैलरी</Link></li>
-            <li><Link to="/results">परिणाम</Link></li>
+            <li><NavLink to="/">होम</NavLink></li>
+            <li><NavLink to="/team">टीम</NavLink></li>
+            <li><NavLink to="/events">इवेंट्स</NavLink></li>
+            <li><NavLink to="/gallery">गैलरी</NavLink></li>
+            {/* <li><Link to="/results">परिणाम</Link></li> */}
         </>
     );
 
@@ -48,7 +48,8 @@ function Navbar() {
         <div className={`navbar-container ${sticky ? 'sticky-navbar' : ''}`}>
             <div className="navbar">
                 <div className="navbar-start">
-                    <a className="logo">राजभाषा</a>
+                    <NavLink to="/"><a className="logo">राजभाषा</a></NavLink>
+                    {/* <a className="logo"><NavLink to="/">राजभाषा</NavLink></a> */}
                 </div>
                 <div className="navbar-center">
                     <ul className="nav-menu">
