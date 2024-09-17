@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
 import './Footer.css';
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaYoutube, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+// import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 
 const Footer = () => {
 
@@ -17,12 +17,12 @@ const Footer = () => {
                 <li><NavLink to="/">होम</NavLink></li>
                 <li><a href='https://rajbhashanitrr.in/'>मर्चेंडाइज़</a></li>
                 <li><NavLink to="/gallery">गैलरी</NavLink></li>
-                <li><NavLink to="/">मुख्य वेबसाइट</NavLink></li>
+                <li><a href='https://rajbhasha.vercel.app/'>मुख्य वेबसाइट</a></li>
               </ul>
               <ul className="footer-event-column">
                 <li><NavLink to="/results">परिणाम</NavLink></li>
                 <li><NavLink to="/team">टीम</NavLink></li>
-                <li><NavLink to="/home">मुख्य पृष्ठ</NavLink></li>
+                <li><NavLink to="/events">इवेंट्स</NavLink></li>
                 <li><NavLink to="/contact">संपर्क</NavLink></li>
               </ul>
             </div>
@@ -49,8 +49,8 @@ const Footer = () => {
             <div className="footer-event-list">
             <ul className="footer-event-column">
                 <li ><NavLink to="/events/nukkad">नुक्कड़</NavLink></li>
-                <li ><NavLink to="/event/andha">प्रश्नोत्तरी</NavLink></li>
-                <li ><NavLink to="/event/andha">अंधा मोड़</NavLink></li>
+                <li ><NavLink to="/events/andha">प्रश्नोत्तरी</NavLink></li>
+                <li ><NavLink to="/events/andha">अंधा मोड़</NavLink></li>
                 <li ><NavLink to="/events/nukkad">चित्र कथा</NavLink></li>
               </ul>
               <ul className="footer-event-column">

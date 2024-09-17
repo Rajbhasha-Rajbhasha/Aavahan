@@ -15,7 +15,7 @@ import Cores from "./Cores";
 
 const WebTeam = () => {
   return (
-    <div className={styles.container} style={{background:"#fef9e7" , maxWidth:"100vw" ,overflowX:"hidden"}}>
+    <div className={styles.container} style={{background:"#fef9e7" , maxWidth:"100vw" ,overflowX:"hidden",}}>
       <Title color={"DEVELOPERS"} noncolor={"TEAM"} />
       <div data-aos="fade-up" className="container">
         <div class="bg-black">
