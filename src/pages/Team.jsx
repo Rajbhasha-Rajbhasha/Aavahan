@@ -14,10 +14,8 @@ import Cores from "./Cores";
 
 const Team = () => {
   return (
-    <div className={styles.container} style={{background:"#fef9e7" , maxWidth:"100vw" ,overflowX:"hidden", backgroundImage: 'url(https://i.postimg.cc/YCTcMP4y/bgweb12.jpg)'
-      }
-    }>
-      <Title color={"RAJBHASHA"} noncolor={"TEAM"} />
+    <div className={styles.container} style={{ maxWidth:"100vw" ,overflowX:"hidden"}}>
+      <Title color={"राजभाषा"} noncolor={"समिति"} style={{color: "white"}}/>
       <div data-aos="fade-up" className="container">
         <div className="fn_cs_news container">
           <div className="news_part">
@@ -29,7 +27,7 @@ const Team = () => {
           </div>
         </div>
       </div>
-      <Title color={"OVERALL"} noncolor={"COORDINATORS"} />
+      <Title color={"प्रधान"} noncolor={"समन्वयक"} />
       <div className={styles.OverallHeadSection}>
         {coordinatorsList.map((heads) => {
           if (heads.id <= 3) {
@@ -47,10 +45,11 @@ const Team = () => {
           return null;
         })}
       </div>
-      <Title color={"HEAD"} noncolor={"COORDINATORS"} />
+      <Title color={"मुख्य"} noncolor={"समन्वयक"} />
+      <Title color={"प्रबंधन"}/>
       <div className={styles.HeadSection}>
         {coordinatorsList.map((heads) => {
-          if (heads.id > 3 && heads.id < 20) {
+          if (heads.id ==5 ||heads.id == 7 || heads.id == 18) {
             return (
               <HeadCard
                 key={heads.id}
@@ -65,7 +64,85 @@ const Team = () => {
           return null;
         })}
       </div>
-      <Title color={"CORE"} noncolor={"COORDINATORS"} />
+      <Title color={"जनसंपर्क"}/>
+      <div className={styles.HeadSection}>
+        {coordinatorsList.map((heads) => {
+          if (heads.id >= 12 && heads.id <=16 ) {
+            return (
+              <HeadCard
+                key={heads.id}
+                img={heads.imgUrl}
+                name={heads.name}
+                domain={heads.domain}
+                linkedinId={heads.linkedinUrl}
+                InstaId={heads.instaUrl}
+              />
+            );
+          }
+          return null;
+        })}
+      </div>
+      
+      <Title color={"लेखन"}/>
+      <div className={styles.HeadSection}>
+        {coordinatorsList.map((heads) => {
+          if (heads.id >= 8 && heads.id <= 10 ) {
+            return (
+              <HeadCard
+                key={heads.id}
+                img={heads.imgUrl}
+                name={heads.name}
+                domain={heads.domain}
+                linkedinId={heads.linkedinUrl}
+                InstaId={heads.instaUrl}
+              />
+            );
+          }
+          return null;
+        })}
+      </div>
+
+      <Title color={"डिजाईन "}/>
+      <div className={styles.HeadSection}>
+        {coordinatorsList.map((heads) => {
+          if (heads.id == 6 || heads.id == 17 ) {
+            return (
+              <HeadCard
+                key={heads.id}
+                img={heads.imgUrl}
+                name={heads.name}
+                domain={heads.domain}
+                linkedinId={heads.linkedinUrl}
+                InstaId={heads.instaUrl}
+              />
+            );
+          }
+          return null;
+        })}
+      </div>
+
+      <Title color={"वेब टीम"}/>
+      <div className={styles.HeadSection}>
+        {coordinatorsList.map((heads) => {
+          if (heads.id == 4 || heads.id == 11 ) {
+            return (
+              <HeadCard
+                key={heads.id}
+                img={heads.imgUrl}
+                name={heads.name}
+                domain={heads.domain}
+                linkedinId={heads.linkedinUrl}
+                InstaId={heads.instaUrl}
+              />
+            );
+          }
+          return null;
+        })}
+      </div>
+
+
+
+      <Title color={"संयोजक"}  />
       <div>
        <Cores/>
       </div>
@@ -99,7 +176,7 @@ const Team = () => {
       </div> */}
 
 
-      <Title color={"Volunteers"} noncolor={"Of Committee"} />
+      <Title color={"सदस्य"} />
        <div >
       <Domain />
       </div>

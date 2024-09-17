@@ -15,17 +15,17 @@ import Cores from "./Cores";
 
 const WebTeam = () => {
   return (
-    <div className={styles.container} style={{background:"#fef9e7" , maxWidth:"100vw" ,overflowX:"hidden",}}>
-      <Title color={"DEVELOPERS"} noncolor={"TEAM"} />
+    <div className={styles.container} style={{ maxWidth:"100vw" ,overflowX:"hidden"}}>
+      <Title color={"वेब"} noncolor={"टीम"} />
       <div data-aos="fade-up" className="container">
         <div class="bg-black">
 
         </div>
       </div>
-      <Title color={"HEADS OF"} noncolor={" TECH TEAM"} />
+      <Title color={"मुख्य समन्वयक"} noncolor={""} />
       <div className={styles.OverallHeadSection}>
         {coordinatorsList.map((heads) => {
-          if (heads.id == "4" || heads.id == "15") {
+          if (heads.id == "4" || heads.id == "11") {
             return (
               <OCCard
                 key={heads.id}
@@ -41,7 +41,7 @@ const WebTeam = () => {
         })}
       </div>
       
-      <Title color={"CORE"} noncolor={"COORDINATORS"} />
+      <Title color={"समन्वयक"} noncolor={""} />
       <div className={styles.HeadSection }>
         {coordinatorsList.map((heads) => {
           if (   heads.id > 19 && heads.id < 23 ) {
@@ -61,7 +61,7 @@ const WebTeam = () => {
         })}
       </div>
 
-      <Title color={"TECHNICAL"} noncolor={"EXECUTIVES"} />
+      <Title color={"कार्यकारी"} noncolor={""} />
       <div className={styles.HeadSection}>
         {coordinatorsList.map((heads) => {
           if (   heads.id > 22 && heads.id < 26 ) {
@@ -80,7 +80,7 @@ const WebTeam = () => {
         })}
       </div>
 
-      <Title color={"SUPER"} noncolor={"SENIORS"} />
+      <Title color={"उपदेशक"} noncolor={""} />
       <div className={styles.OverallHeadSection} style={{marginBottom: "4rem"}}>
         {coordinatorsList.map((heads) => {
           if (heads.id == "26" || heads.id == "27") {

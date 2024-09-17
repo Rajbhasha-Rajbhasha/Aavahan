@@ -13,7 +13,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className="parallex">
+    <div className="parallex example">
       <Banner />
       <div className="wrapper">
         <Below />

@@ -70,7 +70,8 @@
   }
   
   .position{
-    color: #621C39;
+    /* color: #bed04b; */
+    color: rgb(202, 27, 83);
     font-weight: 600;
     font-family: "kanit";
     font-variation-settings: "wght" 500;
