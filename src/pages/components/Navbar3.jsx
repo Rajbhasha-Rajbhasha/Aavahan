@@ -1,102 +1,87 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
+import './Navbar3.css';
 
-import { styles } from "./styles";
-import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+function Navbar() {
+    const [sticky, setSticky] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const dropdownRef = useRef(null);
 
-const Navbar = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setSticky(true);
+            } else {
+                setSticky(false);
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsDropdownOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    const navItems = (
+        <>
+            <li><NavLink to="/">होम</NavLink></li>
+            <li><NavLink to="/team">टीम</NavLink></li>
+            <li><NavLink to="/events">इवेंट्स</NavLink></li>
+            <li><NavLink to="/gallery">गैलरी</NavLink></li>
+            {/* <li><Link to="/results">परिणाम</Link></li> */}
+        </>
+    );
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  return (
-    <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
-      }`}
-    >
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <Link
-          to='/'
-          className='flex items-center gap-2'
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img src='/rajbhashalogo.jpeg' alt='logo' className='w-9 h-9 object-contain' style={{ borderRadius: '50%'}} />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-          राजभाषा &nbsp;
-            {/* <span className='sm:block hidden'> राsजभाषा</span> */}
-          </p>
-        </Link>
-
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-              <Link to={`/${nav.id}`}>{nav.title}</Link>
-            </li>
-          ))}
-        </ul>
-
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img
-            src={toggle ? close : menu}
-            alt='menu'
-            className='w-[28px] h-[28px] object-contain'
-            onClick={() => setToggle(!toggle)}
-          />
-
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
-          >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
-                >
-                  <Link to={`/${nav.id}`}>{nav.title}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+    return (
+        <div className={`navbar-container ${sticky ? 'sticky-navbar' : ''}`}>
+            <div className="navbar">
+                <div className="navbar-start">
+                    <NavLink to="/"><a className="logo">राजभाषा</a></NavLink>
+                    {/* <a className="logo"><NavLink to="/">राजभाषा</NavLink></a> */}
+                </div>
+                <div className="navbar-center">
+                    <ul className="nav-menu">
+                        {navItems}
+                    </ul>
+                </div>
+                <div className="navbar-end">
+                    <div className="dropdown" ref={dropdownRef}>
+                        <div className="dropdown-button" onClick={toggleDropdown}>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="icon"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M4 6h16M4 12h8m-8 6h16"
+                                />
+                            </svg>
+                        </div>
+                        <ul className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
+                            {navItems}
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </nav>
-  );
-};
+    );
+}
 
 export default Navbar;
