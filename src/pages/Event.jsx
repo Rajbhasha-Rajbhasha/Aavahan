@@ -46,7 +46,7 @@ function Event() {
         <div className="eventline">
           <div
             className="container left-container"
-            onClick={() => handleClick("nukkad")}
+            onClick={() => handleClick("vaachan")}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
@@ -83,7 +83,7 @@ function Event() {
           </div>
           <div
             className="container right-container"
-            onClick={() => handleClick("andha")}
+            onClick={() => handleClick("chitra")}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
