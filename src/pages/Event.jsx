@@ -201,7 +201,7 @@ function Event() {
           </div>
           <div
             className="container right-container"
-            onClick={() => handleClick(" purnaviraam")}
+            onClick={() => handleClick("purnaviraam")}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
