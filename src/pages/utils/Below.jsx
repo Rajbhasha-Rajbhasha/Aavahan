@@ -13,7 +13,7 @@ const BelowBanner = () => {
         <div className="belowmain">
           <div className="headmain">
     
-            <h1 className="heading1" style={{ fontSize: "40px" }}>
+            <h1 className="heading1" style={{ fontSize: "60px" , fontWeight: "bold" }}>
     
             आह्वान
             </h1>
@@ -29,7 +29,7 @@ const BelowBanner = () => {
             </button>
           </div>
     
-           <div className="section2">  <h2>शब्दांगन</h2></div>
+           <div className="outerhead">  <h2>शब्दांगन</h2></div>
     
           <div className="content1" >
     

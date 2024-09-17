@@ -7,11 +7,11 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-image: url('https://i.postimg.cc/YCTcMP4y/bgweb12.jpg');
+    /* background-image: url('https://i.postimg.cc/YCTcMP4y/bgweb12.jpg');
     background-size: cover; /* Ensures the image covers the entire page */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: fixed; 
+    /* background-position: center; Centers the image */
+    /* background-repeat: no-repeat; Prevents the image from repeating */
+    /* background-attachment: fixed;  */ 
 }
 
 /* Heading Section */
@@ -26,7 +26,7 @@
 }
 
 .para {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.6;
     max-width: 900px;
     margin: 0 auto 20px auto;
@@ -54,6 +54,7 @@
 /* Section Headings */
 .section2, .outerhead {
     margin: 40px 0 20px 0;
+    opacity: 0;
 }
 
 .section2 h2, .outerhead h2 {
@@ -87,9 +88,11 @@
 }
 
 .card1 h2 {
-    color: #ff1b00;
     font-size: 24px;
+    font-weight: bold;
     margin-bottom: 15px;
+    color: #f1c40f;
+    text-align: center;
 }
 
 .card1 img {

@@ -19,7 +19,8 @@ function Banner() {
                         textAnchor="middle"
                         dominantBaseline="middle"
                         fill="#2d112b"
-                        fontSize="48"
+                        fontSize="60"
+                        fontWeight="bold"
                         fontFamily="Noto Sans Devanagari, sans-serif"
                        
                     >

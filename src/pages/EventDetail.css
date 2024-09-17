@@ -1,6 +1,6 @@
 .details {
   width: 100vw;
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,15 +22,14 @@
   text-align: center;
   width: 90%; 
   padding: 30px 20px;
-  background: linear-gradient(135deg, #244b40, #99f2c8);
   border-radius: 15px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   color: #fff;
   min-height: 60vh;
 }
 
 .content h1 {
   font-size: 4.5rem;
+  padding-top: 2rem;
   margin-bottom: 15px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -47,7 +46,7 @@
   display: inline-block;
   margin:0;
   font-size: 1.2rem;
-  color: #f0932b;
+  color: black;
 }
 
 p {
@@ -82,7 +81,6 @@ p {
   justify-content: space-around;
   align-items: center;
   width: 100%; 
-  background: linear-gradient(135deg, #45819a, #284954, #45819a);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
