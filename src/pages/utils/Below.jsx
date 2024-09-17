@@ -1,13 +1,16 @@
 import React, { useEffect, useRef }  from "react";
+import { useNavigate } from 'react-router-dom';
+
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import "./Below.css";
 
 const BelowBanner = () => {
 
-    const newclick = () =>{ 
-        <NavLink to="/events"></NavLink>
-        const libraryRef = useRef(null);
-    }
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/events');
+  }
 
     return (
         <div className="belowmain">
@@ -24,7 +27,7 @@ const BelowBanner = () => {
             और कविता पाठन जैसी गतिविधियाँ शामिल हैं। ये गतिविधियाँ हिंदी साहित्य को बढ़ावा देती हैं और छात्रों को 
             रचनात्मक और बौद्धिक रूप से संलग्न होने के लिए प्रोत्साहित करती हैं। क्लब युवाओं में हिंदी के प्रति सराहना और संरक्षण की भूमिका निभाता है।
             </p>
-            <button className="but" onClick={newclick}>
+            <button className="but" onClick={handleClick}>
             कार्यक्रम के लिए पंजीकरण करें
             </button>
           </div>
