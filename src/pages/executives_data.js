@@ -49,17 +49,17 @@ export const executivesList = [
         },
         {
           id: "10",
-          Name: "शुभम ठाकुर",
+          Name: "संजू रोहिल्ला",
           Domain: "वेब टीम"
         },
         {
           id: "11",
-          Name: "ऋषभ चंद्राकर",
+          Name: "शुभम ठाकुर",
           Domain: "वेब टीम"
         },
         {
           id: "12",
-          Name: "संजू रोहिल्ला",
+          Name: "ऋषभ चंद्राकर",
           Domain: "वेब टीम"
         }
         ,

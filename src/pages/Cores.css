@@ -1,6 +1,6 @@
 .cores_data{
     display: grid;
-    grid-template-columns: auto auto auto auto ;
+    grid-template-columns: auto auto auto auto auto ;
     /* justify-content: space-between; */
     /* width: 70%; */
     /* margin: 30px; */

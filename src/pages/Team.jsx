@@ -64,7 +64,7 @@ const Team = () => {
           return null;
         })}
       </div>
-      <Title color={"जनसंपर्क"}/>
+      <Title color={"प्रचार"}/>
       <div className={styles.HeadSection}>
         {coordinatorsList.map((heads) => {
           if (heads.id >= 12 && heads.id <=16 ) {
