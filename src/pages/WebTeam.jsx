@@ -22,7 +22,7 @@ const WebTeam = () => {
 
         </div>
       </div>
-      <Title color={"मुख्य समन्वयक"} noncolor={""} />
+      <Title color={"वेब टीम के मुख्य समन्वयक"} noncolor={""} />
       <div className={styles.OverallHeadSection}>
         {coordinatorsList.map((heads) => {
           if (heads.id == "4" || heads.id == "11") {
@@ -41,7 +41,7 @@ const WebTeam = () => {
         })}
       </div>
       
-      <Title color={"समन्वयक"} noncolor={""} />
+      <Title color={"वेब टीम के समन्वयक"} noncolor={""} />
       <div className={styles.HeadSection }>
         {coordinatorsList.map((heads) => {
           if (   heads.id > 19 && heads.id < 23 ) {
@@ -61,7 +61,7 @@ const WebTeam = () => {
         })}
       </div>
 
-      <Title color={"कार्यकारी"} noncolor={""} />
+      <Title color={"वेब टीम के कार्यकारी"} noncolor={""} />
       <div className={styles.HeadSection}>
         {coordinatorsList.map((heads) => {
           if (   heads.id > 22 && heads.id < 26 ) {

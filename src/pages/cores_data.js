@@ -13,7 +13,7 @@ export const coresList = [
     },
     {
       id: "3",
-      Name: "हिमांशु राजपूत"      ,
+      Name: "हिनेश सिंह ठाकुर",
       Branch: "",
       Domain: "प्रबंधन",
     },
@@ -62,9 +62,33 @@ export const coresList = [
     },
     {
       id: "11",
-      Name: "हुमांशु साहु",
+      Name: "आदि वार्ष्णेय",
       Branch: "",
-      Domain: "लेखन",
+      Domain: "प्रचार",
+    },
+    {
+      id: "11",
+      Name: "समृद्धि खरे",
+      Branch: "",
+      Domain: "प्रचार",
+    },
+    {
+      id: "11",
+      Name: "मानसी गुप्ता",
+      Branch: "",
+      Domain: "प्रचार",
+    },
+    {
+      id: "11",
+      Name: "अभिषेक कुमार",
+      Branch: "",
+      Domain: "प्रचार",
+    },
+    {
+      id: "11",
+      Name: "प्रांजल शर्मा",
+      Branch: "",
+      Domain: "प्रचार",
     },
     {
       id: "12",
